@@ -8,6 +8,9 @@ import com.bumptech.glide.Glide
 import com.vmatdev.testprojectone.R
 import com.vmatdev.testprojectone.network.objects.post.data.PostDto
 import kotlinx.android.synthetic.main.view_post_item.view.*
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class PostListAdapter(val callback: (PostDto) -> Unit) : RecyclerView.Adapter<PostListAdapter.ViewHolder>() {
 
@@ -25,7 +28,7 @@ class PostListAdapter(val callback: (PostDto) -> Unit) : RecyclerView.Adapter<Po
         val post = posts[position]
         holder.itemView.title.text = post.title
         holder.itemView.text.text = post.text
-        holder.itemView.date.text = post.date
+        holder.itemView.date.text = SimpleDateFormat("dd MM yyyy hh:mm:ss", Locale.ENGLISH).format(Date(post.getCalendarDate().timeInMillis))
         holder.itemView.setOnClickListener {
             callback.invoke(post)
         }

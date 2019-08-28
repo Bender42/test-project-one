@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.support.v4.app.FragmentActivity
 import android.widget.FrameLayout
 import com.vmatdev.testprojectone.R
+import com.vmatdev.testprojectone.ui.main.fragments.PostInfoFragment
+import com.vmatdev.testprojectone.ui.main.fragments.PostListFragment
+import com.vmatdev.testprojectone.ui.main.viewModel.MainViewModel
 
 class MainActivity : FragmentActivity() {
 

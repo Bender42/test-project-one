@@ -1,4 +1,4 @@
-package com.vmatdev.testprojectone.ui.main
+package com.vmatdev.testprojectone.ui.main.fragments
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
 import com.vmatdev.testprojectone.R
+import com.vmatdev.testprojectone.ui.main.MainActivity
+import com.vmatdev.testprojectone.ui.main.viewModel.MainViewModel
 import kotlinx.android.synthetic.main.fragment_post_info.*
 
 class PostInfoFragment : Fragment() {

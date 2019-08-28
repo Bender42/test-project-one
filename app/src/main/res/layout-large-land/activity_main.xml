@@ -7,14 +7,14 @@
 
     <fragment
         android:id="@+id/post_list_container"
-        android:name="com.vmatdev.testprojectone.ui.main.PostListFragment"
+        android:name="com.vmatdev.testprojectone.ui.main.fragments.PostListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1" />
 
     <fragment
         android:id="@+id/post_info_container"
-        android:name="com.vmatdev.testprojectone.ui.main.PostInfoFragment"
+        android:name="com.vmatdev.testprojectone.ui.main.fragments.PostInfoFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1" />

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#0d7acc</color>
+    <color name="colorPrimaryDark">#0B5F9C</color>
+    <color name="colorAccent">#0d7acc</color>
+
+    <color name="splashBackground">#fafafa</color>
+
+    <color name="colorTransparent">#00FFFFFF</color>
 
     <color name="primaryText">#000000</color>
     <color name="additionalText">#6B6B6B</color>
 
-    <color name="divider">#806B6B6B</color>
+    <color name="divider">#19000000</color>
+
+    <color name="progressColor">#B2FFFFFF</color>
 </resources>
