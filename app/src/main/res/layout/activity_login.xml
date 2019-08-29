@@ -11,9 +11,9 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="16dp"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             app:layout_constraintBottom_toTopOf="@+id/phone_container"
@@ -35,7 +35,7 @@
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/password_container"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo"
             app:layout_constraintVertical_chainStyle="packed">
@@ -52,6 +52,7 @@
                 android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:includeFontPadding="false"
                 android:inputType="phone" />
 
     </LinearLayout>
@@ -64,7 +65,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintBottom_toTopOf="@+id/save_auth_data"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -82,9 +83,26 @@
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:includeFontPadding="false"
                 android:inputType="textPassword" />
 
     </LinearLayout>
+
+    <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/save_auth_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:text="Сохранить данные для входа"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_container"
+            app:layout_constraintVertical_bias="0.0" />
 
     <android.support.v7.widget.AppCompatButton
             android:id="@+id/button"
@@ -93,7 +111,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="8dp"
             android:backgroundTint="@color/colorAccent"
             android:text="Далее"
             android:textColor="@android:color/white"
@@ -101,7 +119,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password_container" />
+            app:layout_constraintTop_toBottomOf="@+id/save_auth_data" />
 
     <include
             android:id="@+id/progress_bar"
