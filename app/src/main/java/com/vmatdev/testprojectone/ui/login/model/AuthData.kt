@@ -1,4 +1,4 @@
-package com.vmatdev.testprojectone.data
+package com.vmatdev.testprojectone.ui.login.model
 
 class AuthData(
     var phone: String = "",

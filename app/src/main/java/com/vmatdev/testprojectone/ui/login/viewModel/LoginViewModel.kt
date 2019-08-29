@@ -5,7 +5,7 @@ import android.arch.lifecycle.ViewModel
 import android.content.Context
 import android.os.Handler
 import com.google.gson.Gson
-import com.vmatdev.testprojectone.data.AuthData
+import com.vmatdev.testprojectone.ui.login.model.AuthData
 import com.vmatdev.testprojectone.events.SingleLiveEvents
 import com.vmatdev.testprojectone.network.CallResult
 import com.vmatdev.testprojectone.network.MyConnector
