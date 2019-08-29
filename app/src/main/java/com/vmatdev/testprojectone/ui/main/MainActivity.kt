@@ -1,8 +1,8 @@
 package com.vmatdev.testprojectone.ui.main
 
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import android.support.v4.app.FragmentActivity
+import androidx.fragment.app.FragmentActivity
 import android.widget.FrameLayout
 import com.vmatdev.testprojectone.R
 import com.vmatdev.testprojectone.ui.main.fragments.PostInfoFragment

@@ -1,7 +1,7 @@
 package com.vmatdev.testprojectone.ui.login.viewModel
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import android.content.Context
 import android.os.Handler
 import com.google.gson.Gson

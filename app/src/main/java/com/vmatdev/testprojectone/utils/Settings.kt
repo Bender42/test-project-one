@@ -2,21 +2,17 @@ package com.vmatdev.testprojectone.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.preference.PreferenceManager
-
-//import androidx.security.crypto.EncryptedSharedPreferences
+import androidx.security.crypto.EncryptedSharedPreferences
 
 class Settings(context: Context) {
 
-    private val sharedPreferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
-
-    /*private val sharedPreferences: SharedPreferences = SharedPreferencesEncrypted.create(
+    private val sharedPreferences: SharedPreferences = EncryptedSharedPreferences.create(
         PREFERENCES_FILE_NAME,
         MASTER_KEY_ALIAS,
         context,
         EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
         EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM
-    )*/
+    )
 
     fun clearValue(key: String) {
         sharedPreferences.edit().remove(key).apply()

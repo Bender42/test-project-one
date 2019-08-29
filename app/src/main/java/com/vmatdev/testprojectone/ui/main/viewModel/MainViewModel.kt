@@ -1,7 +1,7 @@
 package com.vmatdev.testprojectone.ui.main.viewModel
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import android.os.Handler
 import com.vmatdev.testprojectone.events.SingleLiveEvents
 import com.vmatdev.testprojectone.network.CallResult

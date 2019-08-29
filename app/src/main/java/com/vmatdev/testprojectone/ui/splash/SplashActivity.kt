@@ -3,7 +3,7 @@ package com.vmatdev.testprojectone.ui.splash
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.vmatdev.testprojectone.ui.login.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
