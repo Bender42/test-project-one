@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
 import com.bumptech.glide.GenericTransitionOptions
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.transition.ViewPropertyTransition
@@ -16,7 +17,7 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 
-class PostListAdapter(val callback: (PostDto) -> Unit) :
+class PostListAdapter(private val callback: (PostDto) -> Unit) :
     RecyclerView.Adapter<PostListAdapter.ViewHolder>() {
 
     private val posts = ArrayList<PostDto>()
@@ -61,9 +62,11 @@ class PostListAdapter(val callback: (PostDto) -> Unit) :
     }
 
     fun setPosts(posts: List<PostDto>) {
+        val diffUtilCallback = PostListDiffUtilCallback(this.posts, posts)
+        val diffResult = DiffUtil.calculateDiff(diffUtilCallback)
         this.posts.clear()
         this.posts.addAll(posts)
-        notifyDataSetChanged()
+        diffResult.dispatchUpdatesTo(this)
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view)

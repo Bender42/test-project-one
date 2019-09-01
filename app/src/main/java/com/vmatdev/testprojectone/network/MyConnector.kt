@@ -11,6 +11,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.net.UnknownHostException
 
 class MyConnector {
 
@@ -41,7 +42,11 @@ class MyConnector {
             }
 
             override fun onFailure(call: Call<PhoneMaskResponse>, t: Throwable) {
-                callback.invoke(CallResult.Error(t.localizedMessage))
+                if (t is UnknownHostException) {
+                    callback.invoke(CallResult.Error("Проверьте интернет соединение"))
+                } else {
+                    callback.invoke(CallResult.Error(t.localizedMessage))
+                }
             }
         })
     }
@@ -63,7 +68,11 @@ class MyConnector {
             }
 
             override fun onFailure(call: Call<List<PostDto>>, t: Throwable) {
-                callback.invoke(CallResult.Error(t.localizedMessage))
+                if (t is UnknownHostException) {
+                    callback.invoke(CallResult.Error("Проверьте интернет соединение"))
+                } else {
+                    callback.invoke(CallResult.Error(t.localizedMessage))
+                }
             }
         })
     }
@@ -80,12 +89,16 @@ class MyConnector {
                         callback.invoke(CallResult.Error("Получен пустой ответ"))
                     }
                 } else {
-                    callback.invoke(CallResult.Error("Плохой ответ от сервера"))
+                    callback.invoke(CallResult.Error("Неверный логин или пароль"))
                 }
             }
 
             override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
-                callback.invoke(CallResult.Error(t.localizedMessage))
+                if (t is UnknownHostException) {
+                    callback.invoke(CallResult.Error("Проверьте интернет соединение"))
+                } else {
+                    callback.invoke(CallResult.Error(t.localizedMessage))
+                }
             }
         })
     }

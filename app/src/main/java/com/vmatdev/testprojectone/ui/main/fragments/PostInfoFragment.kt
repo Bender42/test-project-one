@@ -36,7 +36,7 @@ class PostInfoFragment : Fragment() {
     }
 
     fun updatePostView() {
-        val selectedPost = getViewModel().posts.value?.find { it.id == getViewModel().selectedPostId }
+        val selectedPost = getViewModel().selectedPost
         if (selectedPost != null) {
             not_selected.visibility = View.GONE
             image_content.visibility = View.VISIBLE

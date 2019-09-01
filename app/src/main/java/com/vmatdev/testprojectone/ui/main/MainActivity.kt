@@ -26,8 +26,7 @@ class MainActivity : FragmentActivity() {
         }
     }
 
-    fun onPostSelected(id: String) {
-        viewModel.selectedPostId = id
+    fun onPostSelected() {
         val postInfoFragment = supportFragmentManager.findFragmentById(R.id.post_info_container)
         if (postInfoFragment != null && postInfoFragment.isAdded) {
             postInfoFragment as PostInfoFragment

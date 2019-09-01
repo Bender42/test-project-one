@@ -46,7 +46,7 @@ class LoginViewModel : ViewModel() {
                         }
                     }
                     is CallResult.Error -> {
-                        messages.postValue("Неверный логин или пароль")
+                        messages.postValue(it.error)
                     }
                 }
             }
