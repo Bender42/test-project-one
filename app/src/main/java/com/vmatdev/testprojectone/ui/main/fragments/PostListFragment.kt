@@ -119,8 +119,8 @@ class PostListFragment : Fragment() {
     private fun getPulseAnimation(target: View): ObjectAnimator {
         return ObjectAnimator.ofPropertyValuesHolder(
             target,
-            PropertyValuesHolder.ofFloat("scaleX", 1.2f),
-            PropertyValuesHolder.ofFloat("scaleY", 1.2f)
+            PropertyValuesHolder.ofFloat("scaleX", 1.05f),
+            PropertyValuesHolder.ofFloat("scaleY", 1.05f)
         ).apply {
             duration = 300
             repeatCount = 1
